@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	   <link rel="stylesheet" href="{% static "appTwo/users2.css" %}"/>
+
+    <title>Userpagina</title>
+  </head>
+  <body>
+    <div class="container">
+
+
+    <h1>Dit is de userlijst</h1>
+
+
+    <a href="{% url 'appTwo:newuser' %}" class="btn btn-info" role="button">Add new user</a>
+
+    <h2>Eerst in een lijst</h2>
+      <ol>
+        {% if users_records %}
+          {% for u in users_records %}
+            <li>{{ u.first_name }} {{ u.last_name }} ({{u.e_mail}})</li>
+        {% endfor %}
+        {% endif %}
+      </ol>
+
+    <h2>Dan in een tabel</h2>
+
+    <div class="userlijst">
+       {% if users_records %}
+       <table>
+           <thead>
+             <th>first name</th>
+             <th>last name</th>
+             <th>e-mail</th>
+           </thead>
+
+            {% for u in users_records %}
+              <tr>
+	                <td>{{ u.first_name }}</td>
+                  <td>{{ u.last_name }}</td>
+                  <td>{{ u.e_mail }}</td>
+	              </tr>
+            {% endfor %}
+          </table>
+          {% else %}
+          <p>no users in database</p>
+          {% endif %}
+
+
+
+    </div>
+    </div>
+
+  </body>
+</html>

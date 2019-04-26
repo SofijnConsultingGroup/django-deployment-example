@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <!-- bootstrap -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <!-- // css -->
+    <!-- <link rel="stylesheet" href="Connect4.css"> -->
+    <link rel="stylesheet" href="{% static "appTwo/connect4.css" %}"/>
+
+    <!-- // jquery -->
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+
+    <title>Vier op een rij</title>
+  </head>
+
+  <body>
+
+        <body style="text-align: center;">
+      		<h1 align=center>Let's play Connect 4!</h1>
+          <h2 id='win' align="center">Speler 1 begint</h2>
+
+
+      		<div class="outerDiv col-md-8 col-sm-11 col-xs-12">
+      			<div class="leftDiv col-md-3 col-sm-4 col-xs-12">
+      				<h4>Speler settings</h4>
+
+                <form>
+                  <div class="form-row">
+                    <div class="col-md-9 col-sm-8 col-xs-5"  id="t">
+                      <input type="text" id='naam1' class="form-control" placeholder="Naam speler 1">
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-3">
+                      <input class = 'color' type="color" id='colorWell1' name="colorWell1" value="#fff028">
+                    </div>
+                  </div>
+                  <div class="form-row">
+                    <div class="col-md-9 col-sm-8 col-xs-5" id="t">
+                      <input type="text" id='naam2' class="form-control" placeholder="Naam speler 2">
+                    </div>
+                    <div class="col-md-2 col-sm-2 col-xs-3" >
+                      <input class = 'color' type="color" id='colorWell2' name="colorWell2" value="#f71713">
+                    </div>
+                  </div>
+
+                  <div class="form-group col-md-12">
+                    <label for="inputState">Wie begint?</label>
+                    <select id="inputState" class="form-control">
+                      <option selected>Speler 1</option>
+                      <option>De loser</option>
+                      <option>Random</option>
+                      <option>Speler 2</option>
+                    </select>
+                  </div>
+
+                  <br>
+                  <br>
+                  <br>
+                    <h4>Huidige score:</h4>
+                    <h5 id='score'>0 - 0</h5>
+                    <button id='opnieuw' class="btn btn-success btn-lg" type="button" name="Opnieuw">Volgend spel</button>
+                    <button id='reset' class="btn btn-dark btn-sm" onclick="window.location.href = 'Connect4_Improved.html';" type="button" name="reset">Reset alles</button>
+
+                </form>
+
+
+
+      			</div>
+      			<div class="rightDiv col-md-9 col-sm-8 col-xs-12">
+      				<table class='board' align="center">
+                  <tr>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                  </tr>
+                  <tr>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                  </tr>
+                  <tr>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                  </tr>
+                  <tr>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                  </tr>
+                  <tr>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                  </tr>
+                  <tr>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                    <td><button type="button"></button></td>
+                  </tr>
+
+
+                </table>
+
+
+
+      			</div>
+      			<div "style: clear:both;"></div>
+      		</div>
+      	</body>
+
+
+  </body>
+
+  <script src="{% static "appTwo/connect4.js" %}"></script>
+
+</html>

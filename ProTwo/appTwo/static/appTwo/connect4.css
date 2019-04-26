@@ -1,0 +1,80 @@
+h1{
+  color:green;
+}
+
+.color{
+  width: 40px;
+  height: 40px;
+  border-radius: 10%
+}
+
+/* #t{
+  width: 200px;
+} */
+
+#win{
+  padding-bottom: 20px;
+}
+
+#opnieuw{
+  margin: auto;
+}
+
+.center{margin:auto;}
+
+
+#score{
+  padding: 20px;
+}
+
+.board button{
+  border: 3px solid gray;
+  height: 60px;
+  width: 100%;
+  border-radius: 50%;
+  margin-top: 10%;
+}
+
+
+td{
+  border-color: gray;
+  border-width: thick;
+  border-style: solid;
+  height:10%;
+  width: 5%;
+  text-align: center;
+  /* font-size: 3em; */
+  /* font-weight: bold; */
+}
+
+#reset{
+  margin: 10px;
+}
+
+.outerDiv
+			{
+				background-color: white;
+        /* border: solid gray 1px; */
+				color: #fff;
+				height: 100%;
+				/* width: 70%; */
+				margin: 0px auto;
+				padding: 5px;
+			}
+			.leftDiv
+			{
+				background-color: white;
+        border: dotted gray 1px;
+				color: #000;
+				height: 100%;
+				/* width: 25%; */
+				float: left;
+			}
+			.rightDiv
+			{
+				background-color: white;
+				color: #000;
+				height: 100%;
+				/* width: 73%; */
+				float: right;
+			}
