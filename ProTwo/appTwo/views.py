@@ -29,9 +29,9 @@ def add_users(request):
         form = forms.NewUserForm(request.POST)
         if form.is_valid():
             print("validation succesfull!")
-            print(f"voornaam: {form.cleaned_data['first_name']}")
-            print(f"achternaam: {form.cleaned_data['last_name']}")
-            print(f"email: {form.cleaned_data['e_mail']}")
+            # print(f"voornaam: {form.cleaned_data['first_name']}")
+            # print(f"achternaam: {form.cleaned_data['last_name']}")
+            # print(f"email: {form.cleaned_data['e_mail']}")
 
             form.save(commit=True)
             return users(request)
